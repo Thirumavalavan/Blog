@@ -1,0 +1,438 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Myblog</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+		$(document).ready(function () {
+		    size_li = $("#myList li").size();
+		    x=3;
+		    $('#myList li:lt('+x+')').show();
+		    $('#loadMore').click(function () {
+		        x= (x+1 <= size_li) ? x+1 : size_li;
+		        $('#myList li:lt('+x+')').show();
+		    });
+		    $('#showLess').click(function () {
+		        x=(x-1<0) ? 1 : x-1;
+		        $('#myList li').not(':lt('+x+')').hide();
+		    });
+		});
+	</script>
+
+</head>
+<body>
+<!-- header -->
+<div class="banner">
+	<div class="container">
+		<div class="header">
+			<div class="logo">
+				<a href="index.html">MYBLOG</a>
+			</div>
+			<div class="header-right">
+				<ul>
+					<li><a href="https://www.facebook.com/"><i class="fb"> </i></a></li>
+					<li><a href="http://www.twitter.com/"><i class="twt"> </i></a></li>
+				<li><a href="login.html" class="login"> Login </a> </li>
+					<div class="clearfix"></div>
+				</ul>
+					
+			</div>
+				<div class="clearfix"> </div>
+			</div>
+				<div class="head-nav">
+					<span class="menu"> </span>
+						<ul class="cl-effect-15">
+						<li class="active"><a href="index.html">HOME</a></li>
+							<li><a href="articles.html" data-hover="Articles">Articles</a></li>
+							<li><a href="blogs.html" data-hover="Blogs">Blogs</a></li>
+							<li><a href="news.html" data-hover="News">News</a></li>
+							<li><a href="resources.html" data-hover="Resources">Resources</a></li>
+							<li><a href="search.html" data-hover="Search">Search</a></li>
+							<li><a href="contact.html" data-hover="Contact Us">Contact Us</a></li>
+								<div class="clearfix"> </div>
+						</ul>
+				</div>
+
+						<!-- script-for-nav -->
+					<script>
+						$( "span.menu" ).click(function() {
+						  $( ".head-nav ul" ).slideToggle(300, function() {
+							// Animation complete.
+						  });
+						});
+					</script>
+				<!-- script-for-nav --> 					 
+	</div> 
+</div>
+<!-- header -->
+<!---728x90--->
+<!-- content -->
+<div class="content">
+	<div class="container">
+	 <div class="load_more">	
+	 <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="images/banner1.png" alt="Chania">
+    </div>
+
+    <div class="item">
+      <img src="images/banner2.png" alt="Chania">
+    </div>
+
+    <div class="item">
+      <img src="images/banner3.png" alt="Flower">
+    </div>
+
+    <div class="item">
+      <img src="images/banner4.png" alt="Flower">
+    </div>
+  </div>
+</div>
+				<h1 class="recent-article"> Recent Articles </h1>
+			     <ul id="myList" class="col-lg-8 col-md-8 col-sm-12 col-xs-12 blog-main">
+			        <!-- These are our grid blocks -->
+			        <li>
+						<div class="l_g">
+							<div class="col-xs-12 col-md-12 col-lg-12 col-sm-12 praesent">
+								<div class="l_g_r">
+								<div class="dapibus row">
+								<div class="col-xs-12 col-sm-3 col-lg-3 col-md-3">
+									<a href="details.html"><img src="images/dummy.png" class="img-responsive" alt=""></a>
+								</div>
+									<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+										<h3><a href="details.html">Lorel Ipsum Simply dummy text</a></h3>
+										<p class="adm">Posted by <a href="#">Admin</a>  |  11 Oct 2016</p>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever. </p>
+										<a href="details.html" class="link">Read More</a>
+									</div>
+								</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-12 col-lg-12 col-sm-12 integ">
+								<div class="l_g_r">
+									<div class="dapibus row">
+								<div class="col-xs-12 col-sm-3 col-lg-3 col-md-3">
+									<a href="details.html"><img src="images/dummy.png" class="img-responsive" alt=""></a>
+								</div>
+									<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+										<h3><a href="details.html">Lorel Ipsum Simply dummy text</a></h3>
+										<p class="adm">Posted by <a href="#">Admin</a>  |  11 Oct 2016</p>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever. </p>
+										<a href="details.html" class="link">Read More</a>
+									</div>
+								</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-12 col-lg-12 col-sm-12 integ">
+								<div class="l_g_r">
+									<div class="dapibus row">
+								<div class="col-xs-12 col-sm-3 col-lg-3 col-md-3">
+									<a href="details.html"><img src="images/dummy.png" class="img-responsive" alt=""></a>
+								</div>
+									<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+										<h3><a href="details.html">Lorel Ipsum Simply dummy text</a></h3>
+										<p class="adm">Posted by <a href="#">Admin</a>  |  11 Oct 2016</p>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever. </p>
+										<a href="details.html" class="link">Read More</a>
+									</div>
+								</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<!---728x90--->
+					 <li>
+						<div class="l_g">
+							<div class="col-xs-12 col-md-12 col-lg-12 col-sm-12 praesent">
+								<div class="l_g_r">
+									<div class="dapibus row">
+								<div class="col-xs-12 col-sm-3 col-lg-3 col-md-3">
+									<a href="details.html"><img src="images/dummy.png" class="img-responsive" alt=""></a>
+								</div>
+									<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+										<h3><a href="details.html">Lorel Ipsum Simply dummy text</a></h3>
+										<p class="adm">Posted by <a href="#">Admin</a>  |  11 Oct 2016</p>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever. </p>
+										<a href="details.html" class="link">Read More</a>
+									</div>
+								</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-12 col-lg-12 col-sm-12 integ">
+								<div class="l_g_r">
+									<div class="dapibus row">
+								<div class="col-xs-12 col-sm-3 col-lg-3 col-md-3">
+									<a href="details.html"><img src="images/dummy.png" class="img-responsive" alt=""></a>
+								</div>
+									<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+										<h3><a href="details.html">Lorel Ipsum Simply dummy text</a></h3>
+										<p class="adm">Posted by <a href="#">Admin</a>  |  11 Oct 2016</p>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever. </p>
+										<a href="details.html" class="link">Read More</a>
+									</div>
+								</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-12 col-lg-12 col-sm-12 integ">
+								<div class="l_g_r">
+									<div class="dapibus row">
+								<div class="col-xs-12 col-sm-3 col-lg-3 col-md-3">
+									<a href="details.html"><img src="images/dummy.png" class="img-responsive" alt=""></a>
+								</div>
+									<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+										<h3><a href="details.html">Lorel Ipsum Simply dummy text</a></h3>
+										<p class="adm">Posted by <a href="#">Admin</a>  |  11 Oct 2016</p>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever. </p>
+										<a href="details.html" class="link">Read More</a>
+									</div>
+								</div>
+								</div>
+							</div>
+
+						</div>
+					</li>
+			        <!----//--->
+					 <li>
+						<div class="l_g">
+							<div class="col-xs-12 col-md-12 col-lg-12 col-sm-12 praesent">
+								<div class="l_g_r">
+									<div class="dapibus row">
+								<div class="col-xs-12 col-sm-3 col-lg-3 col-md-3">
+									<a href="details.html"><img src="images/dummy.png" class="img-responsive" alt=""></a>
+								</div>
+									<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+										<h3><a href="details.html">Lorel Ipsum Simply dummy text</a></h3>
+										<p class="adm">Posted by <a href="#">Admin</a>  |  11 Oct 2016</p>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever. </p>
+										<a href="details.html" class="link">Read More</a>
+									</div>
+								</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-12 col-lg-12 col-sm-12 integ">
+								<div class="l_g_r">
+									<div class="dapibus row">
+								<div class="col-xs-12 col-sm-3 col-lg-3 col-md-3">
+									<a href="details.html"><img src="images/dummy.png" class="img-responsive" alt=""></a>
+								</div>
+									<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+										<h3><a href="details.html">Lorel Ipsum Simply dummy text</a></h3>
+										<p class="adm">Posted by <a href="#">Admin</a>  | 11 Oct 2016</p>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever. </p>
+										<a href="details.html" class="link">Read More</a>
+									</div>
+								</div>
+
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-12 col-lg-12 col-sm-12 praesent">
+								<div class="l_g_r">
+									<div class="dapibus row">
+								<div class="col-xs-12 col-sm-3 col-lg-3 col-md-3">
+									<a href="details.html"><img src="images/dummy.png" class="img-responsive" alt=""></a>
+								</div>
+									<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+										<h3><a href="details.html">Lorel Ipsum Simply dummy text</a></h3>
+										<p class="adm">Posted by <a href="#">Admin</a>  |  11 Oct 2016</p>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever. </p>
+										<a href="details.html" class="link">Read More</a>
+									</div>
+								</div>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</li>
+			        <!----//--->
+			          <li>
+						<div class="l_g">
+							<div class="col-xs-12 col-md-12 col-lg-12 col-sm-12 praesent">
+								<div class="l_g_r">
+									<div class="dapibus row">
+								<div class="col-xs-12 col-sm-3 col-lg-3 col-md-3">
+									<a href="details.html"><img src="images/dummy.png" class="img-responsive" alt=""></a>
+								</div>
+									<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+										<h3><a href="details.html">Lorel Ipsum Simply dummy text</a></h3>
+										<p class="adm">Posted by <a href="#">Admin</a>  |  11 Oct 2016</p>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever. </p>
+										<a href="details.html" class="link">Read More</a>
+									</div>
+								</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-12 col-lg-12 col-sm-12 integ">
+								<div class="l_g_r">
+									<div class="dapibus row">
+								<div class="col-xs-12 col-sm-3 col-lg-3 col-md-3">
+									<a href="details.html"><img src="images/dummy.png" class="img-responsive" alt=""></a>
+								</div>
+									<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+										<h3><a href="details.html">Lorel Ipsum Simply dummy text</a></h3>
+										<p class="adm">Posted by <a href="#">Admin</a>  |  11 Oct 2016</p>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever. </p>
+										<a href="details.html" class="link">Read More</a>
+									</div>
+								</div>
+
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-12 col-lg-12 col-sm-12 praesent">
+								<div class="l_g_r">
+									<div class="dapibus row">
+								<div class="col-xs-12 col-sm-3 col-lg-3 col-md-3">
+									<a href="details.html"><img src="images/dummy.png" class="img-responsive" alt=""></a>
+								</div>
+									<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+										<h3><a href="details.html">Lorel Ipsum Simply dummy text</a></h3>
+										<p class="adm">Posted by <a href="#">Admin</a>  |  11 Oct 2016</p>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever. </p>
+										<a href="details.html" class="link">Read More</a>
+									</div>
+								</div>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</li>
+					 <li>
+						<div class="l_g">
+							<div class="col-xs-12 col-md-12 col-lg-12 col-sm-12 praesent">
+								<div class="l_g_r">
+									<div class="dapibus row">
+								<div class="col-xs-12 col-sm-3 col-lg-3 col-md-3">
+									<a href="details.html"><img src="images/dummy.png" class="img-responsive" alt=""></a>
+								</div>
+									<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+										<h3><a href="details.html">Lorel Ipsum Simply dummy text</a></h3>
+										<p class="adm">Posted by <a href="#">Admin</a>  |  11 Oct 2016</p>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever. </p>
+										<a href="details.html" class="link">Read More</a>
+									</div>
+								</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-12 col-lg-12 col-sm-12 integ">
+								<div class="l_g_r">
+									<div class="dapibus row">
+								<div class="col-xs-12 col-sm-3 col-lg-3 col-md-3">
+									<a href="details.html"><img src="images/dummy.png" class="img-responsive" alt=""></a>
+								</div>
+									<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+										<h3><a href="details.html">Lorel Ipsum Simply dummy text</a></h3>
+										<p class="adm">Posted by <a href="#">Admin</a>  |  11 Oct 2016</p>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever. </p>
+										<a href="details.html" class="link">Read More</a>
+									</div>
+								</div>
+
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-12 col-lg-12 col-sm-12 praesent">
+								<div class="l_g_r">
+									<div class="dapibus row">
+								<div class="col-xs-12 col-sm-3 col-lg-3 col-md-3">
+									<a href="details.html"><img src="images/dummy.png" class="img-responsive" alt=""></a>
+								</div>
+									<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+										<h3><a href="details.html">Lorel Ipsum Simply dummy text</a></h3>
+										<p class="adm">Posted by <a href="#">Admin</a>  |  11 Oct 2016</p>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever. </p>
+										<a href="details.html" class="link">Read More</a>
+									</div>
+								</div>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</li>
+					<div class="clearfix"></div>
+					 <!----//--->
+					 	<div id="loadMore">Load more</div>
+						<div id="showLess">Show less</div>
+			      </ul>
+
+				  <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 integ blog-aside">
+					<div class="aside-widget">
+											<header>
+												<h3>Categories</h3>
+											</header>
+											<div class="body">
+												<ul class="tales-list">
+													<li><a href="#">Email Encryption Explained</a></li>
+													<li><a href="#">Selling is a Function of Design.</a></li>
+													<li><a href="#">It Hard To Come Up With Dummy Titles</a></li>
+													<li><a href="#">Why the Internet is Full of Cats</a></li>
+													<li><a href="#">Last Made-Up Headline, I Swear!</a></li>
+												</ul>
+											</div>
+										</div>
+									<div class="aside-widget">
+											<header>
+												<h3>Authors</h3>
+											</header>
+											<div class="body">
+												<ul class="tales-list">
+													<li><a href="#">Email Encryption Explained</a></li>
+													<li><a href="#">Selling is a Function of Design.</a></li>
+													<li><a href="#">It Hard To Come Up With Dummy Titles</a></li>
+													<li><a href="#">Why the Internet is Full of Cats</a></li>
+													<li><a href="#">Last Made-Up Headline, I Swear!</a></li>
+												</ul>
+											</div>
+										</div>
+									<div class="aside-widget">
+											<header>
+												<h3>Tags</h3>
+											</header>
+											<div class="body clearfix">
+												<ul class="tags">
+													<li><a href="#">OpenPGP</a></li>
+													<li><a href="#">Django</a></li>
+													<li><a href="#">Bitcoin</a></li>
+													<li><a href="#">Security</a></li>
+													<li><a href="#">GNU/Linux</a></li>
+													<li><a href="#">Git</a></li>
+													<li><a href="#">Homebrew</a></li>
+													<li><a href="#">Debian</a></li>    
+												</ul>
+											</div>
+										</div>
+							</div>
+							<div class="clearfix"></div>
+
+
+			    </div>
+	</div>
+</div>
+<!-- content -->	
+<!---728x90--->
+<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="col-xs-12 copy">
+				<div class="top2">
+					<h6>Copyrights &copy; Myblog 2016. All rights reserved.</h6>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+<!-- footer -->
+</body>
+</html>
